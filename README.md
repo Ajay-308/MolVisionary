@@ -58,13 +58,9 @@ Create a new file named `.env` in the root of your project and add the following
 
 ```env
 NEXT_PUBLIC_NVIDIA_API_KEY=your-nvidia-api-key
-
 ABLY_API_KEY='your-ably-api-key'
-
 MONGODB_URL='your-mongodb-url'
-
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
-
 RESEND_KEY='your-resend-api-key'
 ```
 
