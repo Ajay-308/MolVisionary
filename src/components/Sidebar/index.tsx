@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import SidebarItem from "@/components/Sidebar/SidebarItem";
-import ClickOutside from "@/components/ClickOutside";
 import useLocalStorage from "@/hooks/useLocalStorage";
 import {
   LayoutGrid,
@@ -15,7 +14,9 @@ import {
   Settings,
   MessageSquareText,
   ChevronLeft,
+  Columns3
 } from "lucide-react";
+
 interface SidebarProps {
   sidebarOpen: boolean;
   setSidebarOpen: (arg: boolean) => void;
@@ -39,6 +40,11 @@ const menuGroups = [
         icon: <Network size={25} />,
         label: "Model",
         route: "/model",
+      },
+      {
+        icon: <Columns3 size={25} />,
+        label: "Custom Models",
+        route: "/customModel",
       },
       {
         icon: <Microscope size={25} />,
@@ -68,8 +74,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   const pathname = usePathname();
   const [pageName, setPageName] = useLocalStorage("selectedMenu", "dashboard");
 
-  return (
-    <ClickOutside onClick={() => setSidebarOpen(false)}>
+  return ( 
       <aside
         className={`fixed left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-[#000000] lg:translate-x-0 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -78,7 +83,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
           <Link href="/">
             <div className="flex flex-row items-center justify-center space-x-2">
-              <div className="ml-2 rounded-lg bg-[#3c4fe0] p-1">
+              <div className="ml-2 rounded-lg bg-primary p-1">
                 <Image
                   width={32}
                   height={32}
@@ -87,7 +92,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   priority
                 />
               </div>
-              <p className="text-xl font-semibold text-white">ProteinBind</p>
+              <p className="text-xl font-semibold text-white">MolVisionary</p>
             </div>
           </Link>
 
@@ -123,7 +128,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           </nav>
         </div>
       </aside>
-    </ClickOutside>
   );
 };
 

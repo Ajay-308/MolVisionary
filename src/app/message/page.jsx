@@ -1,15 +1,13 @@
-import dynamic from "next/dynamic";
+"use client";
 
-const Chat = dynamic(() => import("./chat"), {
-  ssr: false,
-});
+import Chat from "./chat";
 
-function page() {
-  return (
-    <main>
-      <Chat />
-    </main>
-  );
+function Page() {
+    return (
+        <main>
+            <Chat />
+        </main>
+    );
 }
 
-export default page;
+export default Page;

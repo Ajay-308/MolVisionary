@@ -1,7 +1,6 @@
 "use client";
 import Breadcrumb from "@/components/ComponentHeader/ComponentHeader";
 import Image from "next/image";
-import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import { CameraIcon } from "lucide-react";
 import { useUser } from "../context/UserContext";
@@ -14,7 +13,7 @@ const Profile = () => {
   return (
     <DefaultLayout>
       <div className="mx-auto max-w-242.5">
-        <Breadcrumb pageName="Profile" containActionButton={false} />
+        <Breadcrumb pageName="Profile"/>
 
         <div className="overflow-hidden rounded-lg border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
           <div className="relative z-20 h-35 md:h-65">

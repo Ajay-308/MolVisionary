@@ -10,8 +10,8 @@ import {
   getAllGroups,
   addMessageToGroup,
   getGroupMessages,
-} from "@/lib/actions/group.actions";
-import { getUserByEmail } from "@/lib/actions/user.actions";
+} from "@/lib/actions/group.action";
+import { getUserByEmail } from "@/lib/actions/user.action";
 import { useSession } from "next-auth/react";
 
 function ChatBox() {

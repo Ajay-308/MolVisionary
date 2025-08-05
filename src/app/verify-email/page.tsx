@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { verifyEmail } from "@/lib/actions/user.actions";
+import { verifyEmail } from "@/lib/actions/user.action";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import { CircleCheckBig } from "lucide-react";
 

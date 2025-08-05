@@ -8,7 +8,7 @@ import {
   createMoleculeGenerationHistory,
   getMoleculeGenerationHistoryByUser,
 } from "@/lib/actions/molecule-generation.action";
-import { getUserByEmail } from "@/lib/actions/user.actions";
+import { getUserByEmail } from "@/lib/actions/user.action";
 
 const ModalLayout = () => {
   const { data: session } = useSession();
@@ -47,39 +47,29 @@ const ModalLayout = () => {
     e.preventDefault();
     setLoading(true);
 
-    const API_KEY =
-      "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";
-
-    const invokeUrl =
-      "https://health.api.nvidia.com/v1/biology/nvidia/molmim/generate";
-
     const payload = {
-      algorithm: "CMA-ES",
       num_molecules: parseInt(numMolecules),
-      property_name: "QED",
-      minimize: false,
       min_similarity: parseFloat(minSimilarity),
       particles: parseInt(particles),
       iterations: parseInt(iterations),
-      smi: smiles,
+      smi: smiles
     };
 
     try {
-      const response = await fetch(invokeUrl, {
+      const response = await fetch("/api/generateMolecules", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${API_KEY}`,
-          Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
       });
 
       const data = await response.json();
+
       const generatedMolecules = JSON.parse(data.molecules).map((mol: any) => ({
-        structure: mol.sample,
-        score: mol.score,
-      }));
+          structure: mol.sample,
+          score: mol.score,
+        }));
 
       setMolecules(generatedMolecules);
 
@@ -92,6 +82,7 @@ const ModalLayout = () => {
             particles: parseInt(particles),
             iterations: parseInt(iterations),
             generatedMolecules,
+            
           },
           userId,
         );

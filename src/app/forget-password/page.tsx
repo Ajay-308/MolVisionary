@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import {
   getUserByEmail,
   requestPasswordReset,
-} from "@/lib/actions/user.actions";
+} from "@/lib/actions/user.action";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import { useRouter } from "next/navigation";
 import { MailIcon } from "lucide-react";

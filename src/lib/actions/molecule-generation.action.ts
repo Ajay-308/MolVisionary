@@ -1,6 +1,5 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import MoleculeGenerationHistory from "../database/models/molecule-generation.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";

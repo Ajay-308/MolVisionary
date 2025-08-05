@@ -1,15 +1,32 @@
 <div align="center">
+  
+  <br />
 
+  <div>
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-NVIDIA_NIM-black?style=for-the-badge&logoColor=white&logo=nvidia&color=76B900" alt="nvidia-neMo" />
+  </div>
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
+  <h3 align="center">MolVisionary</h3>
+
+   
+</div>
+
+## 📋 <a name="table">Table of Contents</a>
+
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🧬 [molecule Data Processing](#molecule-data)
 
 ## <a name="introduction">🤖 Introduction</a>
 
-**molVisonary** is a drug discovery and molecule-binding prediction tool built with the latest in machine learning and natural language processing (NLP) technology. Powered by NVIDIA NIM and molecule structure prediction models, this project enables users to simulate molecular interactions and predict molecule structures.
+**MolVisionary** is a drug discovery and molecule-binding prediction tool built with the latest in machine learning and natural language processing (NLP) technology. Powered by NVIDIA NIM and molecule structure prediction models, this project enables users to simulate molecular interactions and predict molecular structures.
 
-The platform is designed to help researchers accelerate drug discovery by leveraging cutting-edge AI models for molecule folding, docking, and molecular dynamics.
-
-If you're getting started and need assistance or face any bugs, join our active Discord community. It's a place where people help each other out.
+The platform is designed to help researchers accelerate drug discovery by leveraging cutting-edge AI models for molecular folding, docking, and molecular dynamics.
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -35,13 +52,15 @@ Follow these steps to set up the project locally on your machine.
 
 Make sure you have the following installed on your machine:
 
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+### **Cloning the Repository**
 
 ```bash
-git clone https://github.com/Ajay-308/molVisonary.git
-```
-
-```
-cd molVisonary
+git clone https://github.com/archit203/MolVisionary.git
+cd MolVisionary
 ```
 
 ### **Installation**
@@ -58,9 +77,13 @@ Create a new file named `.env` in the root of your project and add the following
 
 ```env
 NEXT_PUBLIC_NVIDIA_API_KEY=your-nvidia-api-key
+
 ABLY_API_KEY='your-ably-api-key'
+
 MONGODB_URL='your-mongodb-url'
+
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+
 RESEND_KEY='your-resend-api-key'
 ```
 
@@ -72,7 +95,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-## <a name="molecule-data">🧬 molecule Data Processing</a>
+## <a name="molecule-data">🧬 Molecule Data Processing</a>
 
 This section covers the molecule data processing pipeline, including loading molecule structure files (e.g., PDB format), performing molecular docking simulations, and visualizing the results.
 

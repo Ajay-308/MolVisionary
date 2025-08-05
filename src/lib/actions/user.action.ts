@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 import User from "../database/models/user.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
-import { sendVerificationEmail, sendResetPasswordEmail } from "./email.actions";
+import { sendVerificationEmail, sendResetPasswordEmail } from "./email.action";
 
 export async function createUser(user: CreateUserParams) {
   try {

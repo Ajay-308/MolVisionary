@@ -1,10 +1,5 @@
 import { Schema, model, models } from "mongoose";
 
-// username
-// email
-// password
-// bio
-
 const UserSchema = new Schema(
   {
     email: {
@@ -12,11 +7,18 @@ const UserSchema = new Schema(
       required: true,
       unique: true,
     },
-    username: {
+    fullname: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    photo: {
       type: String,
       required: true,
-      unique: true,
-      Lowercase: false,
+    },
+    firstName: { type: String },
+    lastName: {
+      type: String,
     },
 
     password: {

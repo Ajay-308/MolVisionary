@@ -6,7 +6,7 @@ import DarkModeSwitcher from "@/components/Header/DarkModeSwitcher";
 import { Edit, MailIcon, CameraIcon, User } from "lucide-react";
 import { useSession } from "next-auth/react";
 import React, { useState, useEffect } from "react";
-import { getUserByEmail, updateUser } from "@/lib/actions/user.actions";
+import { getUserByEmail, updateUser } from "@/lib/actions/user.action";
 
 const Settings = () => {
   const { data: session } = useSession();
