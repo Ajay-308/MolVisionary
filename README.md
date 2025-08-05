@@ -1,108 +1,246 @@
+# MolVisionary 🧬
+
 <div align="center">
-  
-  <br />
-
-  <div>
-    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
-    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
-    <img src="https://img.shields.io/badge/-NVIDIA_NIM-black?style=for-the-badge&logoColor=white&logo=nvidia&color=76B900" alt="nvidia-neMo" />
-  </div>
-
-  <h3 align="center">MolVisionary</h3>
-
-   
+  <h3>Advanced Molecular Visualization & Drug Discovery Platform</h3>
+  <p>Accelerating drug discovery through AI-powered molecular analysis and prediction</p>
 </div>
 
-## 📋 <a name="table">Table of Contents</a>
+## 📋 Table of Contents
+- [🤖 Introduction](#-introduction)
+- [⚙️ Tech Stack](#️-tech-stack)
+- [🔋 Features](#-features)
+- [🤸 Quick Start](#-quick-start)
+- [🧬 Molecular Data Processing](#-molecular-data-processing)
+- [🔬 API Integration](#-api-integration)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🧬 [molecule Data Processing](#molecule-data)
+## 🤖 Introduction
 
-## <a name="introduction">🤖 Introduction</a>
+MolVisionary is a cutting-edge drug discovery and molecular analysis platform that leverages advanced AI models and computational chemistry tools. Built with modern web technologies and integrated with NVIDIA's computational platforms, this tool enables researchers to visualize molecular structures, predict protein-ligand interactions, and accelerate the drug discovery process.
 
-**MolVisionary** is a drug discovery and molecule-binding prediction tool built with the latest in machine learning and natural language processing (NLP) technology. Powered by NVIDIA NIM and molecule structure prediction models, this project enables users to simulate molecular interactions and predict molecular structures.
+The platform combines molecular visualization, structure prediction, and collaborative research tools to provide a comprehensive solution for pharmaceutical research and computational biology.
 
-The platform is designed to help researchers accelerate drug discovery by leveraging cutting-edge AI models for molecular folding, docking, and molecular dynamics.
+## ⚙️ Tech Stack
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+**Frontend:**
+- **Next.js 13+** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **React** - UI library with hooks and context
 
-- **Next.js**
-- **TypeScript**
-- **NVIDIA** (for molecule structure prediction)
-- **Tailwind CSS**
-- **React Chart.js** (for visualizing molecule data)
+**Visualization & Analysis:**
+- **Chart.js/Recharts** - Data visualization and molecular charts
+- **Three.js** - 3D molecular structure rendering
+- **D3.js** - Interactive data visualizations
 
-## <a name="features">🔋 Features</a>
+**Backend & APIs:**
+- **NVIDIA NIM APIs** - AI-powered molecular predictions
+- **MongoDB** - Database for molecular data storage
+- **Ably** - Real-time collaboration features
+- **Resend** - Email notifications and communications
 
-👉 **molecule Structure Prediction**: Predicts 2D molecule structures using NVIDIA models.
+**Development Tools:**
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+- **Husky** - Git hooks
 
-👉 **Collaborative Research**: Researches can create groups and colloborate with other research online
+## 🔋 Features
 
-👉 **Responsive Design**: Ensures seamless experience across all devices, from desktops to mobile.
+### 🧪 Core Molecular Analysis
+- **Protein Structure Prediction** - Predict 3D protein structures using AI models
+- **Molecular Docking Simulation** - Simulate drug-target interactions
+- **Ligand Binding Prediction** - Assess binding affinity and selectivity
+- **ADMET Properties** - Predict Absorption, Distribution, Metabolism, Excretion, and Toxicity
 
-## <a name="quick-start">🤸 Quick Start</a>
+### 🤝 Collaborative Research
+- **Research Groups** - Create and manage research teams
+- **Real-time Collaboration** - Share findings and collaborate in real-time
+- **Project Management** - Organize and track research projects
+- **Data Sharing** - Secure sharing of molecular data and results
 
-Follow these steps to set up the project locally on your machine.
+### 📊 Visualization & Analytics
+- **Interactive 3D Viewer** - Visualize molecular structures in 3D
+- **Binding Site Analysis** - Identify and analyze potential binding sites
+- **Structure Comparison** - Compare multiple molecular structures
+- **Performance Metrics** - Track prediction accuracy and model performance
 
-### **Prerequisites**
+### 🔒 Security & Compliance
+- **Data Encryption** - End-to-end encryption for sensitive research data
+- **Access Control** - Role-based permissions and access management
+- **Audit Trails** - Complete logging of all research activities
+- **GDPR Compliance** - Full compliance with data protection regulations
 
-Make sure you have the following installed on your machine:
+### 📱 Cross-Platform Support
+- **Responsive Design** - Seamless experience across all devices
+- **Progressive Web App** - Offline capabilities and native-like experience
+- **API Integration** - RESTful APIs for external tool integration
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+## 🤸 Quick Start
 
-### **Cloning the Repository**
+### Prerequisites
 
+Ensure you have the following installed:
+- **Node.js** (v18 or higher)
+- **npm** or **yarn**
+- **Git**
+
+### Installation
+
+1. **Clone the repository**
 ```bash
 git clone https://github.com/archit203/MolVisionary.git
 cd MolVisionary
 ```
 
-### **Installation**
-
-Install the project dependencies using npm:
-
+2. **Install dependencies**
 ```bash
 npm install
+# or
+yarn install
 ```
 
-### **Set Up Environment Variables**
+3. **Set up environment variables**
 
-Create a new file named `.env` in the root of your project and add the following content:
+Create a `.env.local` file in the root directory:
 
 ```env
-NEXT_PUBLIC_NVIDIA_API_KEY=your-nvidia-api-key
+# NVIDIA API Configuration
+NEXT_PUBLIC_NVIDIA_API_KEY=your_nvidia_api_key_here
+NVIDIA_API_ENDPOINT=https://api.nvidia.com/v1
 
-ABLY_API_KEY='your-ably-api-key'
+# Database Configuration
+MONGODB_URL=your_mongodb_connection_string
+DATABASE_NAME=molvisionary
 
-MONGODB_URL='your-mongodb-url'
+# Real-time Collaboration
+ABLY_API_KEY=your_ably_api_key_here
 
+# Email Services
+RESEND_API_KEY=your_resend_api_key_here
+
+# Application Configuration
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_nextauth_secret_here
 
-RESEND_KEY='your-resend-api-key'
+# File Storage (Optional)
+AWS_S3_BUCKET=your_s3_bucket_name
+AWS_ACCESS_KEY_ID=your_aws_access_key
+AWS_SECRET_ACCESS_KEY=your_aws_secret_key
 ```
 
-### **Running the Project**
-
+4. **Run the development server**
 ```bash
 npm run dev
+# or
+yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+5. **Open your browser**
+Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
-## <a name="molecule-data">🧬 Molecule Data Processing</a>
+## 🧬 Molecular Data Processing
 
-This section covers the molecule data processing pipeline, including loading molecule structure files (e.g., PDB format), performing molecular docking simulations, and visualizing the results.
+### Supported File Formats
+- **PDB** - Protein Data Bank format
+- **SDF** - Structure Data Format
+- **MOL2** - Molecular structure format
+- **SMILES** - Simplified molecular-input line-entry system
 
-### **molecule Structure Input**
+### Processing Pipeline
 
-Users can upload PDB files for molecule structures, which will then be processed by NVIDIA NeMo's molecule-folding models.
+1. **File Upload & Validation**
+   - Secure file upload with format validation
+   - Automatic structure verification
+   - Error handling and user feedback
 
-### **Docking Simulation**
+2. **Structure Analysis**
+   - 3D structure generation from 2D representations
+   - Molecular property calculation
+   - Conformational analysis
 
-Using molecular docking algorithms, the system predicts how small molecules (such as drug candidates) bind to molecule targets.
+3. **AI-Powered Predictions**
+   - Protein folding prediction using NVIDIA models
+   - Binding site identification
+   - Drug-target interaction scoring
+
+4. **Visualization & Export**
+   - Interactive 3D molecular viewer
+   - Customizable visualization options
+   - Export results in multiple formats
+
+### Example Usage
+
+```typescript
+// Import molecular analysis utilities
+import { MolecularAnalyzer, ProteinFolder } from '@/lib/molecular-analysis';
+
+// Analyze uploaded PDB file
+const analyzer = new MolecularAnalyzer();
+const results = await analyzer.analyzePDBFile(file);
+
+// Predict protein structure
+const folder = new ProteinFolder();
+const prediction = await folder.predictStructure(sequence);
+```
+
+## 🔬 API Integration
+
+### NVIDIA NIM Integration
+```typescript
+// Example API call to NVIDIA NIM
+const response = await fetch('/api/nvidia/predict', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${process.env.NVIDIA_API_KEY}`
+  },
+  body: JSON.stringify({
+    sequence: proteinSequence,
+    model: 'alphafold2'
+  })
+});
+```
+
+### Real-time Collaboration
+```typescript
+// Ably integration for real-time updates
+import { useChannel } from '@ably-labs/react-hooks';
+
+const [channel] = useChannel('research-room', (message) => {
+  console.log('New molecular data:', message.data);
+});
+```
+
+## 🤝 Contributing
+
+We welcome contributions from the research community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Code of Conduct
+- Development workflow
+- Pull request process
+- Issue reporting
+
+### Development Setup
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <p>Built with ❤️ for the scientific research community</p>
+  <p>
+    <a href="https://github.com/archit203/MolVisionary/issues">Report Bug</a> •
+    <a href="https://github.com/archit203/MolVisionary/issues">Request Feature</a> •
+    <a href="https://docs.molvisionary.com">Documentation</a>
+  </p>
+</div>
